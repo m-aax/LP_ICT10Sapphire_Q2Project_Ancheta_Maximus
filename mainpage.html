@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>SW#2, University of Casterly Rock</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+
+        body{
+            background-color: rgb(255, 222, 222);
+            background-image: url('westeros_map.webp'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+
+        }
+
+        .subject-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .rounded-img {
+    border-radius: 12px; 
+}
+    #mainbody{
+        background-color: rgba(255, 255, 255, 0.67);
+        border-width: medium;
+        border-radius: 12px;
+        border-color: black;
+        border-style: solid;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 90%;
+        max-width: 1000px;
+        font-family: sans-serif;
+    }
+
+    .row{
+            flex: 25%;
+            padding: 25px;
+            text-align:center;
+        }
+
+        .header {
+            background-color: #930416;
+            color: #fff;
+            padding: 75px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-weight: 700;
+            letter-spacing: 0.4px;
+    
+        }
+
+        .aboutimg img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            max-height: 330px;
+        }
+
+        .divider {
+            width: 450px;
+            height: 10px;
+            background: linear-gradient(10deg, #EAB64D, #930416);
+            margin: 14px 0 20px 0;
+            border-radius: 2px;
+        }
+
+        .divider2 {
+            width: 1000px;
+            height: 10px;
+            background: linear-gradient(10deg, #EAB64D, #a32927);
+            margin: 14px 0 20px 0;
+            border-radius: 2px;
+        }
+
+        .divider3 {
+            width: 200px;
+            height: 10px;
+            background: linear-gradient(10deg, #EAB64D, #930416);
+            margin: 14px 0 20px 0;
+            border-radius: 6px;
+        }
+        .WHAT {
+    font-weight: bold;
+    color: #930416;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    animation: shake 0.5s ease-in-out infinite;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+#institution{
+    background-color: rgba(238, 229, 173);
+    border-width: medium;
+    border-radius: 12px;
+    border-color: black;
+    border-style: solid;
+    padding: 30px;
+    overflow: hidden;
+
+}
+    </style>
+
+</head>
+<body>
+    <!--Navbar yrah-->
+    <nav class="navbar navbar-expand-md bg-danger navbar-danger fixed-top d-flex align-items-center">
+       
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="lannister-sigil.jpeg" 
+                alt="logo" class="rounded-circle" width="88px" height="88px">
+            </a>
+
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-2 text-white" href="#">University of Casterly Rock</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" 
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+        <!--links-->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"> <a class="nav-link" href="#"><span class="text-warning fs-5" >Home</span></a></li>
+                    <li class="nav-item"> <a class="nav-link" href="index.html"><span class="text-warning fs-5">Grade Calculator</span></a></li>
+                    <li class="nav-item"> <a class="nav-link" href="clubs.html"><span class="text-warning fs-5">Clubs</span></a></li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0 d-flex">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search...">
+                    <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br>
+
+<!-- big header thing -->
+<header class="header">
+    <div class="container">
+        <h1 class="display-5">Welcome to University of Casterly Rock (UCR)</h1>
+        <p class="lead mt-3">Excellence in Education Since 42 AC</p>
+        <div class="divider2 mx-auto"></div>
+    </div>
+</header>
+<br><br>
+<div class="container-mt-3" id="mainbody">
+    <div class="container py-5">
+            <!-- this div ios for the title alone-->
+             <div class="container">
+            <h1 class="text-dark mb-4 text-center fw-bold" style="font-family: Cinzel;">University of Casterly Rock<br><span class="badge bg-danger fs-5">"One of the best in Westeros."</span></h1>
+            </div>
+
+            <div class=" container col-md-8">
+                <div class="container">
+
+                    <div class="container col-md-8 d-flex justify-content-center align-items-center">
+                        <img src="casterlyrock.jpg" alt="Casterly Rock. Lannisters." class="img-fluid rounded-img" style="max-width: 700px;">
+                    </div>
+                   
+            
+            </div>
+
+            <br>
+
+            <section>
+                <div class="container" id="institution">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">About Our Institution </h2>
+                        <div class="divider mx-auto"></div>
+                    </div>
+        
+                    <div class="row align-items-center gx-5">
+                        <div class="col-md-6">
+                            <p style="font-family: 'Cormorant Garamond', serif;">
+                            The University of Casterly Rock is a fine education university that was founded in 42 AC by
+                            Lann the Clever, the First of the Lannisters. To this day, the University of Casterly Rock 
+                            is known for its excellence in education, particularly in the fields of finance, politics, and warfare.
+                            We are known for producing some of the most influential people in Westeros, including Ser Arthur Dayne,
+                            Jaime Lannister, and Tyrion Lannister. This university is funded by the immense wealth of House Lannister, 
+                            which comes from the gold mines located beneath Casterly Rock, which is what makes this institution one of the most prestigious
+                            in all of Westeros. This university offers a wide range of programs and degrees, including: warfare, politics, economics,
+                            literature, and history. UCR is a high-quality institution that is dedicated to providing its students with the best education possible.
+                            </p>
+                            <p class="WHAT">
+                                JAIME AND CERSEI LANNISTER ARE DOING WHAAATTT????
+                            </p>
+                            <a class="btn btn-danger mt-2" href="#"><i class="fa-solid fa-book-open me-2"></i>Read More</a>
+                        </div>
+        
+                        <div class="col-md-6 aboutimg">
+                            <img src="Screenshot 2025-12-12 at 9.18.05 AM.png" alt="tywin">
+                            <h6 class="mt-3" style="font-family: Cinzel;">TYWIN LANNISTER, HEADMASTER OF UCR</h6>
+                            <div class="divider3 mx-auto"></div>
+                            <br>
+                            <img src="Screenshot 2025-12-12 at 9.22.18 AM.png" alt="tyrion">
+                            <p class="mt-3" style="font-family: Cinzel;">TYRION LANNISTER <br> Son of Tywin Lannister <br>CHIEF OF STAFF OF UCR</p>
+                            <div class="divider3 mx-auto"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+        </div>
+    </div>             
+</div>
+<br><br><br><br>
+</body>
+</html>
